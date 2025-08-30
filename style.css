@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.nav {
+    text-transform: capitalize;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(241, 60, 90);
+    color: #fff;
+}
+
+.hero h1 {
+    align-items: center;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.parent {
+    margin-left: 50%;
+    width: 600px;
+    /* border: 2px solid #000; */
+    display: flex;
+    gap: 50px;
+
+}
+
+.big_img {
+    margin-top: 5vh;
+    /* margin-left: 60%; */
+    /* border: 2px solid #000; */
+    height: 500px;
+    width: 500px;
+}
+
+.big_img img {
+    border-radius: 20px;
+    height: 100%;
+    align-items: center;
+    width: auto;
+    object-fit: cover;
+    /* display: none; */
+}
+
+.galary {
+    margin-top: 5vh;
+    /* border: 1px solid #000; */
+    height: 500px;
+    width: 20%;
+    overflow: scroll;
+}
+
+.box {
+    margin-bottom: 10px;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.box img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#header {
+    margin-top: 20px;
+}
+
+.love_latter {
+    text-transform: capitalize;
+    color: #fff;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: rgb(241, 60, 90);
+    text-align: center;
+    align-items: center;
+    border: 1px solid #000;
+    height: 50px;
+    margin-top: 20px;
+    font-family: "Caveat", cursive;
+    font-size: 12px;
+}
+
+.latter {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
+    margin-left: 10%;
+    text-transform: capitalize;
+    width: 80%;
+    margin-top: 5vh;
+}
+
+
+
+
+/* Default (Desktop/Laptop) styling to rahega jaise hai */
+
+/* Tablet and Mobile screens */
+@media screen and (max-width: 768px) {
+    .parent {
+        margin-left: 0;
+        /* center properly */
+        width: 100%;
+        flex-direction: column;
+        /* stack vertically */
+        align-items: center;
+        /* center content */
+        gap: 20px;
+    }
+
+    .big_img {
+        width: 90%;
+        /* take most of the screen */
+        height: auto;
+    }
+
+    .big_img img {
+        width: 100%;
+        /* responsive image */
+        height: auto;
+    }
+
+    .galary {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        /* gallery becomes horizontal */
+        overflow-x: auto;
+        /* scroll sideways on small screens */
+        overflow-y: hidden;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .box {
+        flex: 0 0 auto;
+        /* fix size in horizontal scroll */
+        width: 120px;
+        /* small thumbnail size */
+        height: 120px;
+    }
+
+    .box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Very small mobile (<= 480px) */
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+        /* smaller title */
+    }
+
+    .box {
+        width: 90px;
+        height: 90px;
+    }
+}
