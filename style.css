@@ -4,23 +4,38 @@
     text-decoration: none;
 }
 
+/* Make background soft and romantic */
+body {
+    background: linear-gradient(135deg, #ffe0e6 0%, #fff7e6 100%);
+    min-height: 100vh;
+    font-family: "Outfit", "Poppins", "Montserrat", sans-serif;
+}
+
+/* Navigation bar */
 .nav {
     text-transform: capitalize;
     width: 100%;
-    height: 50px;
-    background-color: rgb(241, 60, 90);
+    height: 60px;
+    background: linear-gradient(90deg, #ff4b7d 0%, #ffb347 100%);
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(255,0,80,0.10);
 }
 
+/* Hero section */
 .hero h1 {
-    align-items: center;
-    text-transform: capitalize;
     text-align: center;
-    font-size: 50px;
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
+    font-size: 2.8rem;
+    font-family: "Great Vibes", "Caveat", cursive;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    text-shadow: 0 2px 8px #ff4b7d, 0 4px 16px #ffb34788;
+    /* Added stronger white color and shadow for contrast */
 }
 
 .parent {
@@ -34,19 +49,30 @@
 
 .big_img {
     margin-top: 5vh;
-    /* margin-left: 60%; */
-    /* border: 2px solid #000; */
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(255,0,80,0.10);
+    /* Glowing border effect */
+    border: 4px solid #ff4b7d;
+    box-shadow:
+        0 0 24px 4px #ff4b7d88,
+        0 4px 24px rgba(255,0,80,0.10);
+    transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 .big_img img {
     border-radius: 20px;
     height: 100%;
-    align-items: center;
     width: auto;
     object-fit: cover;
-    /* display: none; */
+    box-shadow: 0 2px 12px #ffb34733;
+    /* Optional: subtle inner glow */
+    border: 2px solid #fff7e6;
 }
 
 .galary {
@@ -78,100 +104,452 @@
 }
 
 .love_latter {
-    text-transform: capitalize;
     color: #fff;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    background-color: rgb(241, 60, 90);
+    background: linear-gradient(90deg, #ff4b7d 0%, #ffb347 100%);
     text-align: center;
-    align-items: center;
-    border: 1px solid #000;
-    height: 50px;
-    margin-top: 20px;
-    font-family: "Caveat", cursive;
-    font-size: 12px;
+    border: none;
+    border-radius: 18px;
+    margin: 32px auto 0 auto;
+    padding: 24px 0 12px 0;
+    font-family: "Great Vibes", "Caveat", cursive;
+    font-size: 2rem;
+    box-shadow: 0 2px 12px rgba(255,0,80,0.10);
+    width: 90vw;
+    max-width: 700px;
+    transition: all 0.3s;
+}
+
+.love_latter h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: "Great Vibes", "Caveat", cursive;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #ff4b7d, 0 4px 16px #ffb34788;
 }
 
 .latter {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-
-    margin-left: 10%;
-    text-transform: capitalize;
-    width: 80%;
-    margin-top: 5vh;
+  font-family: "Outfit", "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #ff4b7d;
+  background: #fff7e6;
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin: 0 auto;
+  width: 80%;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px #ffb34722;
+  text-align: left;
+  line-height: 1.7;
+  transition: all 0.3s;
 }
 
+/* Gallery grid */
+.romantic-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 32px;
+    margin: 40px auto 0 auto;
+    max-width: 900px;
+    justify-items: center;
+}
 
+/* Gallery images */
+.heart-frame {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(255,0,80,0.08);
+}
 
+.heart-frame:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 24px rgba(255,0,80,0.15);
+}
 
-/* Default (Desktop/Laptop) styling to rahega jaise hai */
+.heart-frame img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 3px solid #ff4b7d;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(255,0,80,0.10);
+}
 
-/* Tablet and Mobile screens */
+/* Love Message Modal Styling */
+#loveModal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.love-modal-content {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(255,0,80,0.15);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#closeModal {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #ff4b7d;
+}
+
+.love-modal-heart {
+    font-size: 2rem;
+    color: #ff4b7d;
+    margin-bottom: 12px;
+}
+
+.love-modal-text {
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+/* Reveal Button */
+.reveal-btn {
+    background: linear-gradient(90deg, #ff4b7d 0%, #ffb347 100%);
+    color: #fff;
+    font-family: "Great Vibes", "Caveat", cursive;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 32px;
+    margin-bottom: 18px;
+    margin-top: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #ffb34744;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+
+.reveal-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 18px #ff4b7d44;
+}
+
+/* Proposal Section */
+.proposal-section {
+    margin: 32px auto;
+    text-align: center;
+    background: #fff7e6;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #ffb34722;
+    padding: 24px 12px;
+    max-width: 400px;
+    position: relative;
+}
+
+.proposal-title {
+    font-family: "Great Vibes", "Caveat", cursive;
+    color: #ff4b7d;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+}
+
+.accept-btn, .reject-btn {
+    font-size: 1.1rem;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 10px;
+    margin: 0 10px 16px 10px;
+    cursor: pointer;
+    font-family: "Great Vibes", "Caveat", cursive;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.accept-btn {
+    background: linear-gradient(90deg, #ffb347 0%, #ff4b7d 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px #ffb34744;
+}
+
+.accept-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 18px #ff4b7d44;
+}
+
+.reject-btn {
+    background: linear-gradient(90deg, #b0b0b0 0%, #ff4b7d 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px #b0b0b044;
+}
+
+.reject-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 18px #b0b0b044;
+}
+
+.proposal-msg {
+    font-family: "Outfit", "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    margin-top: 12px;
+    min-height: 32px;
+    transition: color 0.3s;
+}
+
+/* Falling Hearts Animation */
+@keyframes fallHearts {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.7) rotate(-10deg);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(80px) scale(1.1) rotate(10deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(120px) scale(0.8) rotate(-10deg);
+    }
+}
+
+.falling-hearts {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.falling-heart {
+    position: absolute;
+    font-size: 2rem;
+    color: #ff4b7d;
+    animation: fallHearts 1.2s linear forwards;
+    opacity: 0;
+}
+
+/* Timeline Section */
+.timeline-section {
+    max-width: 700px;
+    margin: 48px auto 32px auto;
+    padding: 0 12px;
+    background: #fff7e6;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px #ffb34722;
+}
+
+.timeline-title {
+    text-align: center;
+    font-family: "Great Vibes", "Caveat", cursive;
+    font-size: 2rem;
+    color: #ff4b7d;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    position: relative;
+    margin-left: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #ff4b7d;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 38px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -32px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #ff4b7d 60%, #ffb347 100%);
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px #ff4b7d44;
+}
+
+.timeline-date {
+    font-family: "Poppins", "Outfit", sans-serif;
+    font-size: 1.1rem;
+    color: #ff4b7d;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.timeline-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 2px 8px #ffb34722;
+    font-family: "Outfit", "Montserrat", sans-serif;
+    margin-bottom: 4px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 900px) {
+    .romantic-gallery {
+        max-width: 98vw;
+        gap: 18px;
+    }
+    .big_img {
+        width: 95vw;
+        max-width: 350px;
+        height: 250px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .parent {
         margin-left: 0;
-        /* center properly */
         width: 100%;
         flex-direction: column;
-        /* stack vertically */
         align-items: center;
-        /* center content */
         gap: 20px;
     }
 
     .big_img {
-        width: 90%;
-        /* take most of the screen */
-        height: auto;
+        width: 95vw;
+        max-width: 350px;
+        height: 250px;
     }
 
     .big_img img {
         width: 100%;
-        /* responsive image */
-        height: auto;
-    }
-
-    .galary {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        /* gallery becomes horizontal */
-        overflow-x: auto;
-        /* scroll sideways on small screens */
-        overflow-y: hidden;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .box {
-        flex: 0 0 auto;
-        /* fix size in horizontal scroll */
-        width: 120px;
-        /* small thumbnail size */
-        height: 120px;
-    }
-
-    .box img {
-        width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
+    .romantic-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        max-width: 95vw;
+        margin: 20px auto 0 auto;
+    }
+
+    .heart-frame {
+        width: 120px;
+        height: 120px;
+    }
+
+    .heart-frame img {
+        width: 110px;
+        height: 110px;
+        border-radius: 12px;
+    }
+
+    .love_latter {
+        font-size: 1.2rem;
+        padding: 16px 0 8px 0;
+        margin-top: 10px;
+    }
+
+    .latter {
+        width: 95vw;
+        margin-left: 2vw;
+        font-size: 1rem;
+        padding: 12px 10px;
+    }
 }
 
-/* Very small mobile (<= 480px) */
 @media screen and (max-width: 480px) {
     .hero h1 {
-        font-size: 28px;
-        /* smaller title */
+        font-size: 1.3rem;
     }
 
-    .box {
-        width: 90px;
-        height: 90px;
+    .big_img {
+        max-width: 320px;
+        height: 220px;
     }
+
+    .romantic-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .heart-frame {
+        width: 160px;
+        height: 160px;
+    }
+
+    .heart-frame img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+    }
+
+    .love_latter {
+        font-size: 1rem;
+        padding: 10px 0 4px 0;
+        margin-top: 8px;
+    }
+
+    .latter {
+        font-size: 0.95rem;
+        padding: 8px 6px;
+    }
+}
+
+/* Responsive Timeline */
+@media screen and (max-width: 600px) {
+    .timeline-section {
+        max-width: 99vw;
+        padding: 0 2vw;
+    }
+    .timeline-title {
+        font-size: 1.3rem;
+    }
+    .timeline {
+        margin-left: 18px;
+        padding-left: 10px;
+        border-left-width: 2px;
+    }
+    .timeline-dot {
+        left: -18px;
+        width: 16px;
+        height: 16px;
+    }
+    .timeline-date {
+        font-size: 1rem;
+    }
+    .timeline-content {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+.type-cursor {
+    color: #ff4b7d;
+    font-weight: bold;
+    animation: blink-cursor 0.8s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+    0%, 50% { opacity: 0; }
+    50%, 100% { opacity: 1; }
 }
