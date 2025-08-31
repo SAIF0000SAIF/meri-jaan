@@ -21,15 +21,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(255,0,80,0.10);
+    box-shadow: 0 2px 8px rgba(255, 0, 80, 0.10);
 }
 
 /* Hero section */
 .hero h1 {
     text-align: center;
     font-size: 2.8rem;
-    font-family: "Great Vibes", "Caveat", cursive;
+    font-family: "Dancing Script", cursive;
     font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
     color: #fff;
     letter-spacing: 2px;
     margin-top: 12px;
@@ -39,12 +41,14 @@ body {
 }
 
 .parent {
-    margin-left: 50%;
-    width: 600px;
-    /* border: 2px solid #000; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    max-width: 98vw;
     display: flex;
     gap: 50px;
-
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .big_img {
@@ -56,12 +60,12 @@ body {
     justify-content: center;
     background: #fff;
     border-radius: 24px;
-    box-shadow: 0 4px 24px rgba(255,0,80,0.10);
+    box-shadow: 0 4px 24px rgba(255, 0, 80, 0.10);
     /* Glowing border effect */
     border: 4px solid #ff4b7d;
     box-shadow:
         0 0 24px 4px #ff4b7d88,
-        0 4px 24px rgba(255,0,80,0.10);
+        0 4px 24px rgba(255, 0, 80, 0.10);
     transition: box-shadow 0.3s, border-color 0.3s;
 }
 
@@ -111,9 +115,9 @@ body {
     border-radius: 18px;
     margin: 32px auto 0 auto;
     padding: 24px 0 12px 0;
-    font-family: "Great Vibes", "Caveat", cursive;
+    /* font-family removed here, handled in header/text classes below */
     font-size: 2rem;
-    box-shadow: 0 2px 12px rgba(255,0,80,0.10);
+    box-shadow: 0 2px 12px rgba(255, 0, 80, 0.10);
     width: 90vw;
     max-width: 700px;
     transition: all 0.3s;
@@ -130,19 +134,19 @@ body {
 }
 
 .latter {
-  font-family: "Outfit", "Montserrat", sans-serif;
-  font-weight: 500;
-  color: #ff4b7d;
-  background: #fff7e6;
-  border-radius: 12px;
-  padding: 18px 24px;
-  margin: 0 auto;
-  width: 80%;
-  font-size: 1.1rem;
-  box-shadow: 0 2px 8px #ffb34722;
-  text-align: left;
-  line-height: 1.7;
-  transition: all 0.3s;
+    font-family: "Outfit", "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #ff4b7d;
+    background: #fff7e6;
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px #ffb34722;
+    text-align: left;
+    line-height: 1.7;
+    transition: all 0.3s;
 }
 
 /* Gallery grid */
@@ -167,12 +171,12 @@ body {
     justify-content: center;
     background: #fff;
     border-radius: 18px;
-    box-shadow: 0 2px 12px rgba(255,0,80,0.08);
+    box-shadow: 0 2px 12px rgba(255, 0, 80, 0.08);
 }
 
 .heart-frame:hover {
     transform: scale(1.08) rotate(-2deg);
-    box-shadow: 0 8px 24px rgba(255,0,80,0.15);
+    box-shadow: 0 8px 24px rgba(255, 0, 80, 0.15);
 }
 
 .heart-frame img {
@@ -182,16 +186,18 @@ body {
     border-radius: 16px;
     border: 3px solid #ff4b7d;
     background: #fff;
-    box-shadow: 0 2px 8px rgba(255,0,80,0.10);
+    box-shadow: 0 2px 8px rgba(255, 0, 80, 0.10);
 }
 
 /* Love Message Modal Styling */
 #loveModal {
     display: none;
     position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1000;
     align-items: center;
     justify-content: center;
@@ -203,7 +209,7 @@ body {
     padding: 32px 24px;
     max-width: 320px;
     text-align: center;
-    box-shadow: 0 8px 32px rgba(255,0,80,0.15);
+    box-shadow: 0 8px 32px rgba(255, 0, 80, 0.15);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -231,28 +237,6 @@ body {
     color: #333;
 }
 
-/* Reveal Button */
-.reveal-btn {
-    background: linear-gradient(90deg, #ff4b7d 0%, #ffb347 100%);
-    color: #fff;
-    font-family: "Great Vibes", "Caveat", cursive;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 32px;
-    margin-bottom: 18px;
-    margin-top: 8px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px #ffb34744;
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: inline-block;
-}
-
-.reveal-btn:hover {
-    transform: scale(1.07);
-    box-shadow: 0 6px 18px #ff4b7d44;
-}
-
 /* Proposal Section */
 .proposal-section {
     margin: 32px auto;
@@ -272,45 +256,244 @@ body {
     margin-bottom: 18px;
 }
 
-.accept-btn, .reject-btn {
-    font-size: 1.1rem;
-    padding: 10px 28px;
+/* Proposal Section Buttons - Improved Contrast & Font */
+.accept-btn,
+.reject-btn {
+    font-size: 1.15rem;
+    padding: 12px 32px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     margin: 0 10px 16px 10px;
     cursor: pointer;
     font-family: "Great Vibes", "Caveat", cursive;
-    transition: transform 0.2s, box-shadow 0.2s;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    box-shadow: 0 4px 16px #ff4b7d33;
+    outline: none;
+    border: 2px solid #fff;
 }
 
 .accept-btn {
-    background: linear-gradient(90deg, #ffb347 0%, #ff4b7d 100%);
+    background: linear-gradient(90deg, #ff4b7d 0%, #ffb347 100%);
     color: #fff;
-    box-shadow: 0 2px 8px #ffb34744;
+    /* Stronger border for contrast */
+    border: 2px solid #ff4b7d;
 }
 
-.accept-btn:hover {
-    transform: scale(1.07);
-    box-shadow: 0 6px 18px #ff4b7d44;
+.accept-btn:hover,
+.accept-btn:focus {
+    background: linear-gradient(90deg, #ffb347 0%, #ff4b7d 100%);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px #ff4b7d55;
+    border-color: #ffb347;
 }
 
 .reject-btn {
     background: linear-gradient(90deg, #b0b0b0 0%, #ff4b7d 100%);
     color: #fff;
-    box-shadow: 0 2px 8px #b0b0b044;
+    border: 2px solid #b0b0b0;
 }
 
-.reject-btn:hover {
-    transform: scale(1.07);
-    box-shadow: 0 6px 18px #b0b0b044;
+.reject-btn:hover,
+.reject-btn:focus {
+    background: linear-gradient(90deg, #ff4b7d 0%, #b0b0b0 100%);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px #b0b0b055;
+    border-color: #ff4b7d;
 }
 
-.proposal-msg {
-    font-family: "Outfit", "Montserrat", sans-serif;
+/* Reveal Button - Improved Contrast & Font */
+.reveal-btn {
+    background: linear-gradient(90deg, #ff4b7d 0%, #ffb347 100%);
+    color: #fff;
+    font-family: "Great Vibes", "Caveat", cursive;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 12px 36px;
+    margin-bottom: 18px;
+    margin-top: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px #ff4b7d33;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.reveal-btn:hover,
+.reveal-btn:focus {
+    background: linear-gradient(90deg, #ffb347 0%, #ff4b7d 100%);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px #ff4b7d55;
+    border-color: #ffb347;
+}
+
+/* Import Dancing Script font in your HTML head:
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+*/
+
+/* Use Dancing Script for headers only */
+.hero h1,
+.love_latter h1,
+.proposal-title,
+.timeline-title {
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+}
+
+/* Use Allura font for buttons */
+.accept-btn,
+.reject-btn,
+.reveal-btn {
+    font-family: "Allura", cursive;
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+/* Use Poppins font for all text messages and love letter (not headers) */
+.latter,
+.proposal-msg,
+.timeline-content,
+.timeline-date,
+.love-modal-text {
+    font-family: "Poppins", "Montserrat", "Outfit", sans-serif;
+    color: #ff4b7d;
+    font-size: 1.08rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+}
+
+/* Capitalize all main text and messages */
+.love_latter h1,
+.proposal-title,
+.timeline-title,
+.timeline-date,
+.timeline-content,
+.latter,
+.proposal-msg,
+button,
+.love-modal-text {
+    text-transform: capitalize;
+}
+
+/* Fix: Remove duplicate/unused font-family for .love_latter h1, .proposal-title, .timeline-title */
+.love_latter h1,
+.proposal-title,
+.timeline-title {
+    /* Already set above with Dancing Script */
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #ff4b7d, 0 4px 16px #ffb34788;
+}
+
+/* Fix: Remove duplicate font-family from .timeline-content and .timeline-date */
+.timeline-date {
+    font-family: "Poppins", "Montserrat", "Outfit", sans-serif;
     font-size: 1.1rem;
-    margin-top: 12px;
-    min-height: 32px;
-    transition: color 0.3s;
+    color: #ff4b7d;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.timeline-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 2px 8px #ffb34722;
+    font-family: "Poppins", "Montserrat", "Outfit", sans-serif;
+    margin-bottom: 4px;
+}
+
+/* Proposal Section Buttons - Improved Contrast & Font */
+.accept-btn,
+.reject-btn {
+    font-size: 1.15rem;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 12px;
+    margin: 0 10px 16px 10px;
+    cursor: pointer;
+    font-family: "Great Vibes", "Caveat", cursive;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    box-shadow: 0 4px 16px #ff4b7d33;
+    outline: none;
+    border: 2px solid #fff;
+}
+
+.accept-btn {
+    background: linear-gradient(90deg, #ff4b7d 0%, #ffb347 100%);
+    color: #fff;
+    /* Stronger border for contrast */
+    border: 2px solid #ff4b7d;
+}
+
+.accept-btn:hover,
+.accept-btn:focus {
+    background: linear-gradient(90deg, #ffb347 0%, #ff4b7d 100%);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px #ff4b7d55;
+    border-color: #ffb347;
+}
+
+.reject-btn {
+    background: linear-gradient(90deg, #b0b0b0 0%, #ff4b7d 100%);
+    color: #fff;
+    border: 2px solid #b0b0b0;
+}
+
+.reject-btn:hover,
+.reject-btn:focus {
+    background: linear-gradient(90deg, #ff4b7d 0%, #b0b0b0 100%);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px #b0b0b055;
+    border-color: #ff4b7d;
+}
+
+/* Reveal Button - Improved Contrast & Font */
+.reveal-btn {
+    background: linear-gradient(90deg, #ff4b7d 0%, #ffb347 100%);
+    color: #fff;
+    font-family: "Great Vibes", "Caveat", cursive;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 12px 36px;
+    margin-bottom: 18px;
+    margin-top: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px #ff4b7d33;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.reveal-btn:hover,
+.reveal-btn:focus {
+    background: linear-gradient(90deg, #ffb347 0%, #ff4b7d 100%);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px #ff4b7d55;
+    border-color: #ffb347;
 }
 
 /* Falling Hearts Animation */
@@ -319,14 +502,17 @@ body {
         opacity: 0;
         transform: translateY(-40px) scale(0.7) rotate(-10deg);
     }
+
     20% {
         opacity: 1;
         transform: translateY(0) scale(1) rotate(0deg);
     }
+
     80% {
         opacity: 1;
         transform: translateY(80px) scale(1.1) rotate(10deg);
     }
+
     100% {
         opacity: 0;
         transform: translateY(120px) scale(0.8) rotate(-10deg);
@@ -346,6 +532,44 @@ body {
     font-size: 2rem;
     color: #ff4b7d;
     animation: fallHearts 1.2s linear forwards;
+    opacity: 0;
+}
+
+/* Flower Animation */
+@keyframes fallFlowers {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.7) rotate(-10deg);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(80px) scale(1.1) rotate(10deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(120px) scale(0.8) rotate(-10deg);
+    }
+}
+
+#flowerAnimationContainer {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.flower-emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: fallFlowers 1.2s linear forwards;
     opacity: 0;
 }
 
@@ -393,7 +617,7 @@ body {
 }
 
 .timeline-date {
-    font-family: "Poppins", "Outfit", sans-serif;
+    font-family: "Poppins", "Montserrat", "Outfit", sans-serif;
     font-size: 1.1rem;
     color: #ff4b7d;
     font-weight: 600;
@@ -407,7 +631,7 @@ body {
     font-size: 1rem;
     color: #333;
     box-shadow: 0 2px 8px #ffb34722;
-    font-family: "Outfit", "Montserrat", sans-serif;
+    font-family: "Poppins", "Montserrat", "Outfit", sans-serif;
     margin-bottom: 4px;
 }
 
@@ -417,6 +641,7 @@ body {
         max-width: 98vw;
         gap: 18px;
     }
+
     .big_img {
         width: 95vw;
         max-width: 350px;
@@ -521,22 +746,27 @@ body {
         max-width: 99vw;
         padding: 0 2vw;
     }
+
     .timeline-title {
         font-size: 1.3rem;
     }
+
     .timeline {
         margin-left: 18px;
         padding-left: 10px;
         border-left-width: 2px;
     }
+
     .timeline-dot {
         left: -18px;
         width: 16px;
         height: 16px;
     }
+
     .timeline-date {
         font-size: 1rem;
     }
+
     .timeline-content {
         padding: 12px 16px;
         font-size: 0.9rem;
@@ -550,6 +780,14 @@ body {
 }
 
 @keyframes blink-cursor {
-    0%, 50% { opacity: 0; }
-    50%, 100% { opacity: 1; }
+
+    0%,
+    50% {
+        opacity: 0;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+    }
 }
