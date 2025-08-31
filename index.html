@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santra jaan</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Allura&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -87,7 +88,7 @@
     </div>
 
     <div class="proposal-section">
-        <h2 class="proposal-title">Kya meri santra jaan mera proposal accept karegi?</h2>
+        <h2 class="proposal-title">Santra ji kya aap meri biwi banogi?</h2>
         <button class="accept-btn" onclick="acceptProposal()">Accept 💖</button>
         <button class="reject-btn" onclick="rejectProposal()">Reject 💔</button>
         <div id="proposalMsg" class="proposal-msg"></div>
@@ -99,37 +100,38 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">phli mulakaat</div>
                 <div class="timeline-content">
-                    phli baar meri medam ko dekha tha jab jaan mere ghar ayi thi , ab jaanu mujhe yaad nhi hamne phli
-                    baar kya baat kari thi kyoki tum ladti bohot thi
+                   phli baar meri medam ko dekha tha jab jaan mere ghar ayi thi , ab jaanu mujhe yaad nhi hamne phli baar kya baat kari thi kyoki tum ladti bohot thi 
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">1/1/2020</div>
                 <div class="timeline-content">
-                    Maine apna dil tumhe de diya, aur tumse apna pehla proposal kiya. Wo din meri zindagi ka sabse khaas
-                    pal tha.
+                    Maine apna dil tumhe de diya, aur tumse apna pehla proposal kiya. Wo din meri zindagi ka sabse khaas pal tha.
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">Special Moments</div>
                 <div class="timeline-content">
-                    Humne saath milke bohot saare khoobsurat pal bitaye—choti choti baatein, muskurahat, aur ek dusre ka
-                    saath.
+                    Humne saath milke bohot saare khoobsurat pal bitaye—choti choti baatein, muskurahat, aur ek dusre ka saath.
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">Forever Together</div>
-                <div class="timeline-content">
-                    Ab har din tumhare saath ek nayi kahani hai. Tum ho toh har pal cinematic lagta hai, meri santra
-                    jaan!
-                    ab bas hamari shadi ho jaye aur ham jaldi jaldi 11 bacche kar le
+                <div class="timeline-content"> 
+                    Ab har din tumhare saath ek nayi kahani hai. Tum ho toh har pal cinematic lagta hai, meri santra jaan!
+                    ab bas hamari shadi ho jaye aur ham jaldi jaldi 11 bacche kar le  
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Romantic music (hidden) -->
+    <audio id="romanticMusic" src="https://cdn.pixabay.com/audio/2023/03/13/audio_126b6b2b7a.mp3"></audio>
+
+    <div id="flowerAnimationContainer"></div>
 
     <script>
         // for img galary
@@ -197,6 +199,32 @@
             document.getElementById('proposalMsg').textContent =
                 "Yay! Santra meri jaan ne proposal accept kar liya! Ab zindagi aur bhi pyari ho gayi 💖 ab ham 11 bacche karenge ";
             document.getElementById('proposalMsg').style.color = "#ff4b7d";
+
+            // Play romantic music
+            const music = document.getElementById('romanticMusic');
+            if (music) {
+                music.currentTime = 0;
+                music.play();
+            }
+
+            // Show flower animation
+            showFlowerAnimation();
+        }
+
+        function showFlowerAnimation() {
+            const container = document.getElementById('flowerAnimationContainer');
+            container.innerHTML = '';
+            for (let i = 0; i < 8; i++) {
+                const flower = document.createElement('span');
+                flower.className = 'flower-emoji';
+                flower.textContent = '🌸';
+                flower.style.left = (20 + Math.random() * 160) + 'px';
+                flower.style.top = (10 + Math.random() * 10) + 'px';
+                flower.style.fontSize = (1.5 + Math.random() * 1.5) + 'rem';
+                flower.style.animationDelay = (i * 0.15) + 's';
+                container.appendChild(flower);
+            }
+            setTimeout(() => { container.innerHTML = ''; }, 1600);
         }
 
         function rejectProposal() {
